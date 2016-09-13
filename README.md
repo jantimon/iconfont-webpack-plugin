@@ -70,14 +70,14 @@ a:hover:before {
 }
 ```
 
-## Why shouldn't I just use SVGs
+## Why shouldn't I just use SVGs?
 
-SVGs have some disadvantages and lack certain features especially when using pseudo elements.
+SVGs have some disadvantages and lack certain features especially when using inside pseudo elements.
 
 * [CSS-Transform issues in older Internet Explorer versions](http://stackoverflow.com/questions/21298338/css-transform-on-svg-elements-ie9)
 * [IE9 - IE 10 scaling issues](https://gist.github.com/larrybotha/7881691)
 * Fill color doesn't work on background SVG images
-* Harder to use when building libraries as Paths are relative to the page not to the css
+* Inline SVGs are resolved relative to the page not to the css
 
 ## Should I use icon fonts for everything?
 

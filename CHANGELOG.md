@@ -9,5 +9,6 @@
 
 <a name="0.0.1"></a>
 ## [0.0.1](https://github.com/jantimon/iconfont-webpack-plugin/releases/tag/v0.0.1) (2016-09-13)
-------
-* Initial release
+
+
+* **Initial release**
