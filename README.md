@@ -4,7 +4,7 @@ Icon Font Webpack Plugin
 This aims try to make using icon fonts as convenient as possible.
 
 
-
+```js
 var path = require('path');
 
 var IconfontWebpackPlugin = require('iconfont-webpack-plugin');
