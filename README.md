@@ -70,7 +70,7 @@ a:hover:before {
 }
 ```
 
-## Why shouldn't I just use SVGs?
+## Why shouldn't I just use SVGs instead?
 
 SVGs have some disadvantages and lack certain features especially when using inside pseudo elements.
 
