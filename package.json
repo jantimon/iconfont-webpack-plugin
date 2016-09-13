@@ -1,0 +1,60 @@
+{
+  "name": "iconfont-webpack-plugin",
+  "version": "0.0.0",
+  "description": "Simple icon font handling using webpack",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib/"
+  ],
+  "scripts": {
+    "prepublish": "npm run test",
+    "pretest": "semistandard",
+    "example:default": "webpack --config example/default/webpack.config.js",
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jantimon/iconfont-webpack-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "html",
+    "iconfont"
+  ],
+  "author": "Jan Nicklas <j.nicklas@me.com> (https://github.com/jantimon)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jantimon/iconfont-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/jantimon/iconfont-webpack-plugin",
+  "semistandard": {
+    "ignore": []
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "cz-conventional-changelog": "^1.2.0",
+    "postcss-loader": "^0.13.0",
+    "semistandard": "^9.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "loader-utils": "^0.2.15",
+    "lodash": "^4.15.0",
+    "postcss": "^5.2.0",
+    "svg2ttf": "^4.0.2",
+    "svgicons2svgfont": "^5.0.0",
+    "ttf2woff": "^2.0.1"
+  },
+  "peerDependencies": {
+    "webpack": "*",
+    "postcss-loader": "^0.13.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

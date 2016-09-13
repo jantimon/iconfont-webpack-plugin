@@ -1,0 +1,3 @@
+Icon Font Webpack Plugin
+===================
+

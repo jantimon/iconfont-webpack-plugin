@@ -1,0 +1,8 @@
+a:before {
+  font-icon: url('./account.svg');
+  transition: 0.5s color;
+}
+
+a:hover:before {
+  color: red;
+}
