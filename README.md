@@ -81,7 +81,7 @@ SVGs have some disadvantages and lack certain features especially when using pse
 
 ## Should I use icon fonts for everything?
 
-No. Icon fonts have there use cases but same is true for SVGs, JPEGs, PNGs or even GIFs.  
+No. Icon fonts have use cases but the same is true for SVGs, JPEGs, PNGs or even GIFs.  
 Pick the best solution for your problem - there is no silver bullet.
 
 
