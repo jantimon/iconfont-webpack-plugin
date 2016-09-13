@@ -4,7 +4,7 @@ This release is rather for feedback purpose than for production usage.
 
 # Icon Font Webpack Plugin
 
-With this plugin it is simple stupid to SVG icons as font icons.
+This plugin tries to keep the usage and maintainance of icon fonts as simple as possible.
 
 ## Installation
 
