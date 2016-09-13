@@ -35,6 +35,7 @@
   "devDependencies": {
     "css-loader": "^0.23.1",
     "cz-conventional-changelog": "^1.2.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "postcss-loader": "^0.13.0",
     "semistandard": "^9.0.0",
     "style-loader": "^0.13.1",

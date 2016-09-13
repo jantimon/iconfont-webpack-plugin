@@ -1,4 +1,6 @@
 var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 var IconfontWebpackPlugin = require('../../');
 module.exports = {
   context: __dirname,
@@ -10,10 +12,13 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.css$/, loader: 'style-loader!css-loader!postcss-loader' }
+      { test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
+      }
     ]
   },
   plugins: [
-    new IconfontWebpackPlugin()
+    new IconfontWebpackPlugin(),
+    new ExtractTextPlugin('styles.css')
   ]
 };
