@@ -1,6 +1,6 @@
 {
   "name": "iconfont-webpack-plugin",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "Simple icon font handling using webpack",
   "main": "index.js",
   "files": [
@@ -10,8 +10,8 @@
   "scripts": {
     "prepublish": "npm run test",
     "pretest": "semistandard",
-    "example:default": "webpack --config example/default/webpack.config.js",
-    "test": "jasmine"
+    "changelog": "conventional-changelog -s -i CHANGELOG.md -p angular",
+    "example:default": "webpack --config example/default/webpack.config.js"
   },
   "repository": {
     "type": "git",

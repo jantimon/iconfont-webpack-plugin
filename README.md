@@ -1,8 +1,18 @@
-Icon Font Webpack Plugin
-===================
+# ALPHA
 
-This aims try to make using icon fonts as convenient as possible.
+This release is rather for feedback purpose than for production usage.
 
+# Icon Font Webpack Plugin
+
+With this plugin it is simple stupid to SVG icons as font icons.
+
+## Installation
+
+```
+npm i --save-dev iconfont-webpack-plugin
+```
+
+## Configuration
 
 ```js
 var path = require('path');
@@ -25,8 +35,10 @@ var IconfontWebpackPlugin = require('iconfont-webpack-plugin');
 
 ```
 
+## Usage
 
-Now you can use `font-icon` in your css like here:
+If you set this plugin up properly you can finely use a `font-icon` declarations
+in your `css/scss/sass/less/...`:
 
 ```css
 a:before {
@@ -57,3 +69,23 @@ a:hover:before {
   color: red;
 }
 ```
+
+## Why shouldn't I just use SVGs
+
+SVGs have some disadvantages and lack certain features especially when using pseudo elements.
+
+* [CSS-Transform issues in older Internet Explorer versions](http://stackoverflow.com/questions/21298338/css-transform-on-svg-elements-ie9)
+* [IE9 - IE 10 scaling issues](https://gist.github.com/larrybotha/7881691)
+* Fill color doesn't work on background SVG images
+* Harder to use when building libraries as Paths are relative to the page not to the css
+
+## Should I use icon fonts for everything?
+
+No. Icon fonts have there use cases but same is true for SVGs, JPEGs, PNGs or even GIFs.  
+Pick the best solution for your problem - there is no silver bullet.
+
+
+# License
+
+This project is licensed under [MIT](https://github.com/jantimon/iconfont-webpack-plugin/blob/master/LICENSE).
+
