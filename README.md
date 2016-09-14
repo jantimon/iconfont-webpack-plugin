@@ -81,13 +81,20 @@ With this plugin it is pretty easy to use pixel images, svgs and font-icons side
 
 ## When should you use icon fonts over pure SVGs?
 
-Icon fonts are dead - long live font icons.  
 SVGs have some disadvantages and lack certain features especially when used inside pseudo elements:
 
 * [CSS-Transform issues in older Internet Explorer versions](http://stackoverflow.com/questions/21298338/css-transform-on-svg-elements-ie9)
 * [IE9 - IE 11 scaling issues](https://gist.github.com/larrybotha/7881691)
 * Fill color doesn't work for background SVG images
 * Inline SVGs are resolved relative to the page not to the css
+
+## What about all the rant on icon fonts?
+
+Like all technologies there are disadvantages when using icon fonts.  
+We tried to apply best practices to solve the main issues for you.
+
+* Screen Reader friendly: All generated icons use the [Unicode Private Use Areas](https://en.wikipedia.org/wiki/Private_Use_Areas)
+* Prevents [FOUT](http://www.paulirish.com/2009/fighting-the-font-face-fout/)
 
 # License
 
