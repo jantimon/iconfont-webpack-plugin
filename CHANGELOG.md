@@ -1,3 +1,19 @@
+<a name="0.0.4"></a>
+## [0.0.4](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.3...v0.0.4) (2016-09-14)
+
+
+### Bug Fixes
+
+* **icons-to-woff:** hide "font created" message ([1dbb1fd](https://github.com/jantimon/iconfont-webpack-plugin/commit/1dbb1fd))
+* **icons-to-woff:** ignore `fill="none"` in svgs ([caf29be](https://github.com/jantimon/iconfont-webpack-plugin/commit/caf29be))
+
+
+### Performance Improvements
+
+* **postcss-plugin:** reduce font name length ([edd9168](https://github.com/jantimon/iconfont-webpack-plugin/commit/edd9168))
+
+
+
 <a name="0.0.3"></a>
 ## [0.0.3](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.2...v0.0.3) (2016-09-14)
 
