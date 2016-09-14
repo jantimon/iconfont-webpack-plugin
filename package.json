@@ -1,7 +1,7 @@
 {
   "name": "iconfont-webpack-plugin",
-  "version": "0.0.2",
-  "description": "Simple icon font handling using webpack",
+  "version": "0.0.3",
+  "description": "Simple icon font handling for webpack",
   "main": "index.js",
   "files": [
     "index.js",
@@ -33,6 +33,7 @@
     "ignore": []
   },
   "devDependencies": {
+    "conventional-changelog-cli": "^1.2.0",
     "css-loader": "^0.23.1",
     "cz-conventional-changelog": "^1.2.0",
     "extract-text-webpack-plugin": "^1.0.1",

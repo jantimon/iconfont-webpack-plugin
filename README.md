@@ -4,7 +4,7 @@ This release is rather for feedback purpose than for production usage.
 
 # Icon Font Webpack Plugin
 
-This plugin tries to keep the usage and maintainance of icon fonts as simple as possible.
+This plugin tries to keep the usage and maintenance of icon fonts as simple as possible.  
 
 ## Installation
 
@@ -15,8 +15,6 @@ npm i --save-dev iconfont-webpack-plugin
 ## Configuration
 
 ```js
-var path = require('path');
-
 var IconfontWebpackPlugin = require('iconfont-webpack-plugin');
 
   // make sure you use the postcss loader:
@@ -32,13 +30,12 @@ var IconfontWebpackPlugin = require('iconfont-webpack-plugin');
   plugins: [
     new IconfontWebpackPlugin()
   ]
-
 ```
 
 ## Usage
 
-If you set this plugin up properly you can finely use a `font-icon` declarations
-in your `css/scss/sass/less/...`:
+After setting up the plugin your css has now a new feature:  
+`font-icon` declarations
 
 ```css
 a:before {
@@ -70,25 +67,27 @@ a:hover:before {
 }
 ```
 
-## Why shouldn't I just use SVGs instead?
+## Should you use icon fonts for everything?
 
-SVGs have some disadvantages and lack certain features especially when using inside pseudo elements.
+No.
 
-* [CSS-Transform issues in older Internet Explorer versions](http://stackoverflow.com/questions/21298338/css-transform-on-svg-elements-ie9)
-* [IE9 - IE 10 scaling issues](https://gist.github.com/larrybotha/7881691)
-* Fill color doesn't work on background SVG images
-* Inline SVGs are resolved relative to the page not to the css
-
-## Should I use icon fonts for everything?
-
-No. 
-
-Icon fonts are really good for decorative icons (where the icon is purely ornamental and doesn’t incorporate core meaning or functionality). 
+Icon fonts are really good for decorative icons (where the icon is purely ornamental and doesn’t incorporate core meaning or functionality).
 
 For critical icons without fallbacks (like a hamburger menu icon) you should rather use SVGs.
-But also JPEGs, PNGs or even GIFs have their use cases.
+But also JPEGs, PNGs and even GIFs have their use cases.
 
 Pick the best solution for your problem - there is no silver bullet.
+With this plugin it is pretty easy to use pixel images, svgs and font-icons side by side.
+
+## When should you use icon fonts over pure SVGs?
+
+Icon fonts are dead - long live font icons.  
+SVGs have some disadvantages and lack certain features especially when used inside pseudo elements:
+
+* [CSS-Transform issues in older Internet Explorer versions](http://stackoverflow.com/questions/21298338/css-transform-on-svg-elements-ie9)
+* [IE9 - IE 11 scaling issues](https://gist.github.com/larrybotha/7881691)
+* Fill color doesn't work for background SVG images
+* Inline SVGs are resolved relative to the page not to the css
 
 # License
 

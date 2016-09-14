@@ -1,3 +1,12 @@
+<a name="0.0.3"></a>
+## [0.0.3](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.2...v0.0.3) (2016-09-14)
+
+
+### Bug Fixes
+
+* **postcss-plugin:** Fix dependency watching ([ccbf05e](https://github.com/jantimon/iconfont-webpack-plugin/commit/ccbf05e))
+
+
 <a name="0.0.2"></a>
 ## [0.0.2](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.1...v0.0.2) (2016-09-13)
 
