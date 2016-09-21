@@ -6,3 +6,7 @@ a:before {
 a:hover:before {
   color: red;
 }
+
+a:after {
+  font-icon: 50% url('./account.svg');
+}

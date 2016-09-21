@@ -67,6 +67,16 @@ a:hover:before {
 }
 ```
 
+## Icon sizes
+
+Shorthand for setting the icon size and the icon:
+
+```css
+a:before {
+  font-icon: 80% url('./account.svg');
+}
+```
+
 ## Should you use icon fonts for everything?
 
 No.
