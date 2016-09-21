@@ -1,3 +1,13 @@
+<a name="0.0.6"></a>
+## [0.0.6](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.5...v0.0.6) (2016-09-21)
+
+
+### Features
+
+* **postcss-plugin:** Add font-size shorthand ([ee524cc](https://github.com/jantimon/iconfont-webpack-plugin/commit/ee524cc))
+
+
+
 <a name="0.0.5"></a>
 ## [0.0.5](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.4...v0.0.5) (2016-09-21)
 
