@@ -1,3 +1,13 @@
+<a name="0.0.5"></a>
+## [0.0.5](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.4...v0.0.5) (2016-09-21)
+
+
+### Features
+
+* **icons-to-woff:** Allow to generate variable height fonts ([141ac91](https://github.com/jantimon/iconfont-webpack-plugin/commit/141ac91))
+
+
+
 <a name="0.0.4"></a>
 ## [0.0.4](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.3...v0.0.4) (2016-09-14)
 
