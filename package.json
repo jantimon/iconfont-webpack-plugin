@@ -1,6 +1,6 @@
 {
   "name": "iconfont-webpack-plugin",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Simple icon font handling for webpack",
   "main": "index.js",
   "files": [
@@ -9,9 +9,14 @@
   ],
   "scripts": {
     "prepublish": "npm run test",
-    "pretest": "semistandard",
     "changelog": "conventional-changelog -s -i CHANGELOG.md -p angular",
-    "example:default": "webpack --config example/default/webpack.config.js"
+    "example:default": "webpack --config example/default/webpack.config.js",
+    "test": "ava -v",
+    "posttest": "npm-run-all posttest:*",
+    "posttest:lint": "semistandard",
+    "posttest:coverage": "nyc ava",
+    "posttest:coverage-report": "nyc report --reporter=html",
+    "posttest:coverage-check": "nyc check-coverage --lines 100 --functions 100 --branches 100"
   },
   "repository": {
     "type": "git",
@@ -33,11 +38,15 @@
     "ignore": []
   },
   "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-eslint": "^6.1.2",
     "conventional-changelog-cli": "^1.2.0",
     "css-loader": "^0.23.1",
     "cz-conventional-changelog": "^1.2.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "postcss-loader": "^0.13.0",
+    "npm-run-all": "^2.3.0",
+    "nyc": "^7.1.0",
     "semistandard": "^9.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1"
@@ -58,5 +67,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "semistandard": {
+    "parser": "babel-eslint"
   }
 }

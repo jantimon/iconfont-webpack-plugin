@@ -1,3 +1,13 @@
+<a name="0.0.7"></a>
+## [0.0.7](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.6...v0.0.7) (2016-09-22)
+
+
+### Bug Fixes
+
+* **postcss-plugin:** Allow urls without quotes ([325a167](https://github.com/jantimon/iconfont-webpack-plugin/commit/325a167))
+
+
+
 <a name="0.0.6"></a>
 ## [0.0.6](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.5...v0.0.6) (2016-09-21)
 
