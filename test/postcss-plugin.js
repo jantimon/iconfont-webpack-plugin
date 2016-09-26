@@ -96,7 +96,7 @@ test('should add font-face', async (t) => {
   const fontDefinition = postcssResult.root.nodes[0];
   t.is(fontDefinition.type, 'atrule');
   t.is(fontDefinition.name, 'font-face');
-  t.is(getDeclaration(fontDefinition, 'font-family').value, 'Ff92fa');
+  t.is(getDeclaration(fontDefinition, 'font-family').value, 'vf5c77');
   t.pass();
 });
 
