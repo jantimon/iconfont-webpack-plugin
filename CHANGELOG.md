@@ -1,3 +1,13 @@
+<a name="0.0.8"></a>
+## [0.0.8](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.7...v0.0.8) (2016-09-30)
+
+
+### Bug Fixes
+
+* **postcss-plugin:** Fixed resolving files for context less child compiler ([9797c0b](https://github.com/jantimon/iconfont-webpack-plugin/commit/9797c0b))
+
+
+
 <a name="0.0.7"></a>
 ## [0.0.7](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.6...v0.0.7) (2016-09-22)
 

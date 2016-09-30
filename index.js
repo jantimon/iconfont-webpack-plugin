@@ -13,7 +13,7 @@ IconfontWebpackPlugin.prototype.apply = function (compiler) {
     compilation.plugin('postcss-loader-before-processing',
       (plugins) => (plugins || []).concat(
         require('./lib/postcss-plugin')({
-          compilation: compilation,
+          compiler: compiler,
           pluginOptions: this.options
         })
       )

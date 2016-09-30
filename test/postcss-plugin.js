@@ -3,11 +3,11 @@ import test from 'ava';
 import path from 'path';
 import postcss from 'postcss';
 import postcssPlugin from '../lib/postcss-plugin.js';
-import { webpack1 as compilationMock } from './helpers/compilation-mock.js';
+import { webpack1 as compilerMock } from './helpers/compiler-mock.js';
 
 async function processCss (css) {
   const postCssPluginOptions = {
-    compilation: compilationMock
+    compiler: compilerMock
   };
   const trimmedCss = css.replace(/\s*\n\s*/g, '\n');
   return postcss([ postcssPlugin(postCssPluginOptions) ])
