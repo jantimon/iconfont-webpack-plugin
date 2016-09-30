@@ -169,7 +169,7 @@ test('should not create a font if there is no icon', async (t) => {
   t.pass();
 });
 
-test('should pass the svgs and font name tot the iconfont-webpack-plugin loader', async (t) => {
+test('should pass the svgs and font name to the iconfont-webpack-plugin loader', async (t) => {
   const postcssResult = await processCss(`
     a {
       font-icon: url('./fixtures/account-494x512.svg')
@@ -178,8 +178,6 @@ test('should pass the svgs and font name tot the iconfont-webpack-plugin loader'
       font-icon: url('./fixtures/account-494x512.svg')
     }
   `);
-  const indexFileName = require.resolve('../index.js');
-  const loaderFileName = require.resolve('../lib/loader.js');
   const fontDefinition = postcssResult.root.nodes[0];
   const fontName = getDeclaration(fontDefinition, 'font-family').value;
   const fontSrc = getDeclaration(fontDefinition, 'src').value;
@@ -187,7 +185,7 @@ test('should pass the svgs and font name tot the iconfont-webpack-plugin loader'
     svgs: [ 'fixtures/account-494x512.svg' ],
     name: fontName
   };
-  const expectedSrc = `url('~!!${loaderFileName}?${JSON.stringify(loaderOptions)}!${indexFileName}') format('woff')`;
+  const expectedSrc = `url('~!!iconfont-webpack-plugin/lib/loader.js?${JSON.stringify(loaderOptions)}!iconfont-webpack-plugin') format('woff')`;
   t.is(fontSrc, expectedSrc);
   t.pass();
 });
