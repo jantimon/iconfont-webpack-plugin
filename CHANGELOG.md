@@ -1,3 +1,13 @@
+<a name="0.0.9"></a>
+## [0.0.9](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.8...v0.0.9) (2016-09-30)
+
+
+### Bug Fixes
+
+* **postcss-plugin:** Fix windows path issues ([7cd100a](https://github.com/jantimon/iconfont-webpack-plugin/commit/7cd100a))
+
+
+
 <a name="0.0.8"></a>
 ## [0.0.8](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.7...v0.0.8) (2016-09-30)
 
