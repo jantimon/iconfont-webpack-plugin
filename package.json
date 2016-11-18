@@ -38,30 +38,30 @@
     "ignore": []
   },
   "devDependencies": {
-    "ava": "^0.16.0",
-    "babel-eslint": "^6.1.2",
+    "ava": "^0.17.0",
+    "babel-eslint": "^7.1.1",
     "conventional-changelog-cli": "^1.2.0",
-    "css-loader": "^0.23.1",
+    "css-loader": "^0.26.0",
     "cz-conventional-changelog": "^1.2.0",
     "extract-text-webpack-plugin": "^1.0.1",
-    "postcss-loader": "^0.13.0",
-    "npm-run-all": "^2.3.0",
-    "nyc": "^7.1.0",
-    "semistandard": "^9.0.0",
+    "postcss-loader": "^1.1.1",
+    "npm-run-all": "^3.1.1",
+    "nyc": "^9.0.1",
+    "semistandard": "^9.1.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.3"
   },
   "dependencies": {
-    "loader-utils": "^0.2.15",
-    "lodash": "^4.15.0",
-    "postcss": "^5.2.0",
+    "loader-utils": "^0.2.16",
+    "lodash": "^4.17.2",
+    "postcss": "^5.2.5",
     "svg2ttf": "^4.0.2",
     "svgicons2svgfont": "^5.0.0",
     "ttf2woff": "^2.0.1"
   },
   "peerDependencies": {
     "webpack": "*",
-    "postcss-loader": "^0.13.0"
+    "postcss-loader": "^1.1.1"
   },
   "config": {
     "commitizen": {
