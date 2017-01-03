@@ -1,3 +1,13 @@
+<a name="0.0.11"></a>
+## [0.0.11](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.10...v0.0.11) (2017-01-03)
+
+
+### Bug Fixes
+
+* Add placeholder.svg ([eb92f6f](https://github.com/jantimon/iconfont-webpack-plugin/commit/eb92f6f))
+
+
+
 <a name="0.0.10"></a>
 ## [0.0.10](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.9...v0.0.10) (2017-01-03)
 
