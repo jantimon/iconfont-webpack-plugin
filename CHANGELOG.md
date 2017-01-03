@@ -1,3 +1,13 @@
+<a name="0.0.10"></a>
+## [0.0.10](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.9...v0.0.10) (2017-01-03)
+
+
+### Features
+
+* **plugin:** Use a placeholder to allow better optimizations ([da25a0d](https://github.com/jantimon/iconfont-webpack-plugin/commit/da25a0d))
+
+
+
 <a name="0.0.9"></a>
 ## [0.0.9](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.8...v0.0.9) (2016-09-30)
 

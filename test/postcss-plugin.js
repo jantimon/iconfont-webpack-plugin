@@ -185,7 +185,7 @@ test('should pass the svgs and font name to the iconfont-webpack-plugin loader',
     svgs: [ 'fixtures/account-494x512.svg' ],
     name: fontName
   };
-  const expectedSrc = `url('~!!iconfont-webpack-plugin/lib/loader.js?${JSON.stringify(loaderOptions)}!iconfont-webpack-plugin') format('woff')`;
+  const expectedSrc = `url('~!!iconfont-webpack-plugin/lib/loader.js?${JSON.stringify(loaderOptions)}!iconfont-webpack-plugin/placeholder.svg') format('woff')`;
   t.is(fontSrc, expectedSrc);
   t.pass();
 });
@@ -204,4 +204,3 @@ test('should throw an error for url syntax errors', async (t) => {
   t.is(error, 'Could not parse url "url()".');
   t.pass();
 });
-
