@@ -3,6 +3,8 @@
 
 This plugin tries to keep the usage and maintenance of icon fonts as simple as possible.  
 
+Browser Support: IE9 - IE11 and all modern browsers
+
 ## Installation
 
 ```
