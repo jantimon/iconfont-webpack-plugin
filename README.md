@@ -31,6 +31,29 @@ var IconfontWebpackPlugin = require('iconfont-webpack-plugin');
   ]
 ```
 
+## Advanced Configuration
+
+
+```js
+var IconfontWebpackPlugin = require('iconfont-webpack-plugin');
+
+  // make sure you use the postcss loader:
+  module: {
+    loaders: [
+      {
+        test: /\.css$/,
+        loader: 'css-loader!postcss-loader'
+      }
+    ]
+  },
+  // add the plugin
+  plugins: [
+    new IconfontWebpackPlugin({
+      fontNamePrefix: 'custom-'
+    })
+  ]
+```
+
 ## Usage
 
 After setting up the plugin your css has now a new feature:  

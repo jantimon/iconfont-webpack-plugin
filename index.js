@@ -4,7 +4,7 @@ var _ = require('lodash');
 function IconfontWebpackPlugin (options) {
   // Default options
   this.options = _.extend({
-
+    fontNamePrefix: ''
   }, options);
 }
 
