@@ -9,14 +9,14 @@ const webpack2Compiler = compilerMocks.webpack2;
 
 test('should resolve a webpack path with webpack 1', async (t) => {
   const resolvedPath = await webpackResolverHelper('./test.js', webpack1Compiler, '.');
-  const expectedPath = path.resolve(__dirname, 'test.js');
+  const expectedPath = path.resolve(__dirname, '../test.js');
   t.is(resolvedPath, expectedPath);
   t.pass();
 });
 
 test('should resolve a webpack path with webpack 2', async (t) => {
   const resolvedPath = await webpackResolverHelper('./test.js', webpack2Compiler, '.');
-  const expectedPath = path.resolve(__dirname, 'test.js');
+  const expectedPath = path.resolve(__dirname, '../test.js');
   t.is(resolvedPath, expectedPath);
   t.pass();
 });

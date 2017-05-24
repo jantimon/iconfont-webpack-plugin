@@ -2,7 +2,7 @@
  * Mock of a webpack compiler instance
  */
 const path = require('path');
-const root = path.resolve(__dirname, '../');
+const root = path.resolve(__dirname, '../../');
 
 const compilerWebpack1 = {
   context: root,
