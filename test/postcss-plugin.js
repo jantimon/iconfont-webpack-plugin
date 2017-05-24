@@ -5,9 +5,10 @@ import postcss from 'postcss';
 import postcssPlugin from '../lib/postcss-plugin.js';
 import { webpack1 as compilerMock } from './helpers/compiler-mock.js';
 
-async function processCss (css) {
+async function processCss (css, fontNamePrefix = '') {
   const postCssPluginOptions = {
-    compiler: compilerMock
+    compiler: compilerMock,
+    pluginOptions: { fontNamePrefix }
   };
   const trimmedCss = css.replace(/\s*\n\s*/g, '\n');
   return postcss([ postcssPlugin(postCssPluginOptions) ])
@@ -97,6 +98,19 @@ test('should add font-face', async (t) => {
   t.is(fontDefinition.type, 'atrule');
   t.is(fontDefinition.name, 'font-face');
   t.is(getDeclaration(fontDefinition, 'font-family').value, 'vf5c77');
+  t.pass();
+});
+
+test('should add font-face with fontNamePrefix', async (t) => {
+  const postcssResult = await processCss(`
+    a {
+      font-icon: url('./fixtures/account-494x512.svg')
+    }
+  `, 'prefix-');
+  const fontDefinition = postcssResult.root.nodes[0];
+  t.is(fontDefinition.type, 'atrule');
+  t.is(fontDefinition.name, 'font-face');
+  t.is(getDeclaration(fontDefinition, 'font-family').value, 'prefix-vf5c77');
   t.pass();
 });
 
