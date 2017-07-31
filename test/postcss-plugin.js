@@ -1,14 +1,15 @@
- /* eslint max-len: off, quotes:off, arrow-parens:off */
+'use strict';
+/* eslint max-len: off, quotes:off, arrow-parens:off */
 import test from 'ava';
 import path from 'path';
 import postcss from 'postcss';
 import postcssPlugin from '../lib/postcss-plugin.js';
-import { webpack1 as compilerMock } from './helpers/compiler-mock.js';
+import { loader } from './helpers/loader-mock.js';
 
 async function processCss (css, fontNamePrefix = '') {
   const postCssPluginOptions = {
-    compiler: compilerMock,
-    pluginOptions: { fontNamePrefix }
+    resolve: loader.resolve,
+    fontNamePrefix: fontNamePrefix
   };
   const trimmedCss = css.replace(/\s*\n\s*/g, '\n');
   return postcss([ postcssPlugin(postCssPluginOptions) ])
@@ -216,5 +217,20 @@ test('should throw an error for url syntax errors', async (t) => {
     error = e.message;
   }
   t.is(error, 'Could not parse url "url()".');
+  t.pass();
+});
+
+test('should forward an error from the webpack resolver', async (t) => {
+  let error;
+  try {
+    await processCss(`
+      a {
+        font-icon: url('....')
+      }
+    `);
+  } catch (e) {
+    error = e.message;
+  }
+  t.is(error, 'Mock Error');
   t.pass();
 });

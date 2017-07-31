@@ -1,24 +1,33 @@
 'use strict';
-var _ = require('lodash');
+let _ = require('lodash');
+let assert = require('assert');
 
-function IconfontWebpackPlugin (options) {
+module.exports = function IconfontWebpackPlugin (userOptions) {
   // Default options
-  this.options = _.extend({
-    fontNamePrefix: ''
-  }, options);
-}
+  const options = _.extend({
 
-IconfontWebpackPlugin.prototype.apply = function (compiler) {
-  compiler.plugin('compilation', (compilation) =>
-    compilation.plugin('postcss-loader-before-processing',
-      (plugins) => (plugins || []).concat(
-        require('./lib/postcss-plugin')({
-          compiler: compiler,
-          pluginOptions: this.options
-        })
-      )
-    )
+    // allows to prefix the font name to prevent collisions
+    fontNamePrefix: '',
+
+    // resolve function to translate webpack urls into absolute filepaths
+    // e.g. url('demo.svg') -> '/Users/me/project-x/demo.svg'
+    // usually you should pass on the postcss loader
+    // https://webpack.js.org/api/loaders/#this-resolve
+    resolve: undefined
+
+  }, userOptions);
+
+  // Verify resolve function
+  assert(typeof options.resolve === 'function',
+    'Please pass a resolve function to the IconFontWebpackPlugin.\n' +
+    'For example: \n' +
+    '{\n' +
+    '  loader: \'postcss-loader\',\n' +
+    '  options: {\n' +
+    '    plugins: (loader) => [\n' +
+    '      require(\'iconfont-webpack-plugin\')({ resolve: loader.resolve }), \n\n'
   );
-};
 
-module.exports = IconfontWebpackPlugin;
+  // Call postcss plugin
+  return require('./lib/postcss-plugin')(options);
+};

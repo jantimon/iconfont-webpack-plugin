@@ -5,6 +5,13 @@ This plugin tries to keep the usage and maintenance of icon fonts as simple as p
 
 Browser Support: IE9 - IE11 and all modern browsers
 
+# Requirements
+
+This plugin requires webpack 2+ and postcss-loader 2+
+Some dependencies for this plugin require node 6+
+
+Please use the iconfont-webpack-plugin 0.0.12 for older webpack / postcss-loader versions.
+
 ## Installation
 
 ```
@@ -14,44 +21,57 @@ npm i --save-dev iconfont-webpack-plugin
 ## Configuration
 
 ```js
-var IconfontWebpackPlugin = require('iconfont-webpack-plugin');
+const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
 
-  // make sure you use the postcss loader:
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        loader: 'css-loader!postcss-loader'
+        use: [
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: (loader) => [
+                // Add the plugin
+                new IconfontWebpackPlugin(loader)
+              ]
+            }
+          }
+        ]
       }
     ]
   },
-  // add the plugin
-  plugins: [
-    new IconfontWebpackPlugin()
-  ]
 ```
 
 ## Advanced Configuration
 
 
 ```js
-var IconfontWebpackPlugin = require('iconfont-webpack-plugin');
+vconst IconfontWebpackPlugin = require('iconfont-webpack-plugin');
 
-  // make sure you use the postcss loader:
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        loader: 'css-loader!postcss-loader'
+        use: [
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: (loader) => [
+                // Add the plugin
+                new IconfontWebpackPlugin({
+                  resolve: loader.resolve,
+                  fontNamePrefix: 'custom-',
+                })
+              ]
+            }
+          }
+        ]
       }
     ]
   },
-  // add the plugin
-  plugins: [
-    new IconfontWebpackPlugin({
-      fontNamePrefix: 'custom-'
-    })
-  ]
 ```
 
 ## Usage
