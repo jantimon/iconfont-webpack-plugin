@@ -10,14 +10,26 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       { test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: (loader) => [
+                  new IconfontWebpackPlugin(loader)
+                ]
+              }
+            }
+          ]
+        })
       }
     ]
   },
   plugins: [
-    new IconfontWebpackPlugin(),
     new ExtractTextPlugin('styles.css')
   ]
 };
