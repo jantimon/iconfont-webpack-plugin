@@ -1,3 +1,27 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.11...v1.0.0) (2017-07-31)
+
+### Features
+
+* **postcss-plugin:** Add support for postcss-loader 2.x ([#7](https://github.com/jantimon/iconfont-webpack-plugin/issues/7)) ([8ff664b](https://github.com/jantimon/iconfont-webpack-plugin/commit/8ff664b))
+
+
+### Breaking Changes
+
+* Dropped support for Node version older than 6 (because of dependencies)
+* Dropped support for postcss-loader 0.x and 1.x (because of breaking changes in 2.x)
+
+
+<a name="0.0.12"></a>
+## [0.0.11](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.11...v0.0.12) (2017-01-03)
+
+
+### Bug Fixes
+
+* Copy placeholder svg into the node_modules folder for tests ([7abbbbd](https://github.com/jantimon/iconfont-webpack-plugin/commit/7abbbbd))
+
+
+
 <a name="0.0.11"></a>
 ## [0.0.11](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.10...v0.0.11) (2017-01-03)
 
