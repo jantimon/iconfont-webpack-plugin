@@ -14,18 +14,21 @@ Preprocess Support: All - works with sass, less, stylus, postcss, vanilla css, .
 
 # Requirements
 
-This plugin requires webpack 2+ and postcss-loader 2+
-Some dependencies for this plugin require node 6+
-
-Please use the iconfont-webpack-plugin 0.0.12 for older webpack / postcss-loader versions.
+This plugin requires:
+ + webpack 3.x or higher 
+ + postcss-loader 2.x or higher
+ + node 6 or higher
 
 ## Installation
 
 ```
+npm i --save-dev postcss-loader
 npm i --save-dev iconfont-webpack-plugin
 ```
 
 ## Configuration
+
+All you have to do is to add it to your postcss loader plugins:
 
 ```js
 const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
@@ -61,7 +64,7 @@ const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
 
 
 ```js
-vconst IconfontWebpackPlugin = require('iconfont-webpack-plugin');
+const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
 
   module: {
     rules: [
