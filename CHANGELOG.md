@@ -1,3 +1,13 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/jantimon/iconfont-webpack-plugin/compare/v1.0.0...v1.1.0) (2017-08-04)
+
+
+### Features
+
+* **loader:** Add support for css-modules ([5e1e7fa](https://github.com/jantimon/iconfont-webpack-plugin/commit/5e1e7fa))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/jantimon/iconfont-webpack-plugin/compare/v0.0.11...v1.0.0) (2017-07-31)
 
