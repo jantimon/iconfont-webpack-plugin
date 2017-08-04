@@ -13,6 +13,7 @@
     "prepublish": "npm run test",
     "changelog": "conventional-changelog -s -i CHANGELOG.md -p angular",
     "example:default": "webpack --config example/default/webpack.config.js",
+    "example:module": "webpack --config example/module/webpack.config.js",
     "test": "ava -v",
     "posttest": "npm-run-all posttest:*",
     "posttest:lint": "semistandard",

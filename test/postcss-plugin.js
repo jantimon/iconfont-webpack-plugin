@@ -6,10 +6,11 @@ import postcss from 'postcss';
 import postcssPlugin from '../lib/postcss-plugin.js';
 import { loader } from './helpers/loader-mock.js';
 
-async function processCss (css, fontNamePrefix = '') {
+async function processCss (css, options = {}) {
   const postCssPluginOptions = {
     resolve: loader.resolve,
-    fontNamePrefix: fontNamePrefix
+    fontNamePrefix: options.fontNamePrefix || '',
+    modules: options.modules
   };
   const trimmedCss = css.replace(/\s*\n\s*/g, '\n');
   return postcss([ postcssPlugin(postCssPluginOptions) ])
@@ -26,6 +27,10 @@ function getDeclarations (cssNode, propertyName) {
   return declarations;
 }
 
+/**
+ * Small helper to get information from postcss nodes
+ * e.g. getDeclaration(cssRoot, 'font-family').value -> 'Arial'
+ */
 function getDeclaration (cssNode, propertyName) {
   const declarations = getDeclarations(cssNode, propertyName);
   if (declarations.length === 0) {
@@ -107,7 +112,7 @@ test('should add font-face with fontNamePrefix', async (t) => {
     a {
       font-icon: url('./fixtures/account-494x512.svg')
     }
-  `, 'prefix-');
+  `, { fontNamePrefix: 'prefix-' });
   const fontDefinition = postcssResult.root.nodes[0];
   t.is(fontDefinition.type, 'atrule');
   t.is(fontDefinition.name, 'font-face');
@@ -201,6 +206,27 @@ test('should pass the svgs and font name to the iconfont-webpack-plugin loader',
     name: fontName
   };
   const expectedSrc = `url('~!!iconfont-webpack-plugin/lib/loader.js?${JSON.stringify(loaderOptions)}!iconfont-webpack-plugin/placeholder.svg') format('woff')`;
+  t.is(fontSrc, expectedSrc);
+  t.pass();
+});
+
+test('should pass the svgs and font name to the iconfont-webpack-plugin loader if css-modules are enabled', async (t) => {
+  const postcssResult = await processCss(`
+    a {
+      font-icon: url('./fixtures/account-494x512.svg')
+    }
+    p {
+      font-icon: url('./fixtures/account-494x512.svg')
+    }
+  `, { modules: true });
+  const fontDefinition = postcssResult.root.nodes[0];
+  const fontName = getDeclaration(fontDefinition, 'font-family').value;
+  const fontSrc = getDeclaration(fontDefinition, 'src').value;
+  const loaderOptions = {
+    svgs: [ 'fixtures/account-494x512.svg' ],
+    name: fontName
+  };
+  const expectedSrc = `url('!!iconfont-webpack-plugin/lib/loader.js?${JSON.stringify(loaderOptions)}!iconfont-webpack-plugin/placeholder.svg') format('woff')`;
   t.is(fontSrc, expectedSrc);
   t.pass();
 });

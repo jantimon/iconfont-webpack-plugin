@@ -46,6 +46,12 @@ const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
 
 ## Advanced Configuration
 
+|Name|Type|Default|Description|
+|:--:|:--:|:-----:|:----------|
+|**`resolve`**|`{Function}`||Required - A function which resolves the svg paths. See [resolve](https://webpack.js.org/api/loaders/#this-resolve)|
+|**`fontNamePrefix`**|`{String}`|`''`| Allows to prefix the generated font name |
+|**`modules`**|`{Boolean}`|`false`|Enable/Disable CSS Modules - should be equal to your css-loader settings |
+
 
 ```js
 vconst IconfontWebpackPlugin = require('iconfont-webpack-plugin');
@@ -64,6 +70,7 @@ vconst IconfontWebpackPlugin = require('iconfont-webpack-plugin');
                 new IconfontWebpackPlugin({
                   resolve: loader.resolve,
                   fontNamePrefix: 'custom-',
+                  modules: false,
                 })
               ]
             }
