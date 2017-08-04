@@ -9,7 +9,8 @@ a:before {
 }
 ```
 
-Browser Support: IE9+
+Browser Support: IE9+  
+Preprocess Support: All - works with sass, less, stylus, postcss, vanilla css, ...
 
 # Requirements
 
