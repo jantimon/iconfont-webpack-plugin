@@ -10,7 +10,7 @@ a:before {
 ```
 
 Browser Support: IE9+  
-Preprocess Support: All - works with sass, less, stylus, postcss, vanilla css, ...
+Preprocessor Support: All - works with sass, less, stylus, postcss, vanilla css, ...
 
 # Requirements
 
@@ -28,7 +28,7 @@ npm i --save-dev iconfont-webpack-plugin
 
 ## Configuration
 
-All you have to do is to add it to your postcss loader plugins:
+All you have to do is to add the plugin to your postcss loader plugins inside your `webpack.config.js`:
 
 ```js
 const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
@@ -55,6 +55,8 @@ const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
 ```
 
 ## Advanced Configuration
+
+Probably you won't need this but you can also pass some additional options.
 
 |Name|Type|Default|Description|
 |:--:|:--:|:-----:|:----------|
