@@ -10,7 +10,8 @@ async function processCss (css, options = {}) {
   const postCssPluginOptions = {
     resolve: loader.resolve,
     fontNamePrefix: options.fontNamePrefix || '',
-    modules: options.modules
+    modules: options.modules,
+    descent: options.descent
   };
   const trimmedCss = css.replace(/\s*\n\s*/g, '\n');
   return postcss([ postcssPlugin(postCssPluginOptions) ])
@@ -258,5 +259,24 @@ test('should forward an error from the webpack resolver', async (t) => {
     error = e.message;
   }
   t.is(error, 'Mock Error');
+  t.pass();
+});
+
+test('should pass descent down to the loader', async (t) => {
+  const postcssResult = await processCss(`
+    a {
+      font-icon: url('./fixtures/account-494x512.svg');
+    }
+  `, { descent: 1 });
+  const fontDefinition = postcssResult.root.nodes[0];
+  const fontName = getDeclaration(fontDefinition, 'font-family').value;
+  const fontSrc = getDeclaration(fontDefinition, 'src').value;
+  const loaderOptions = {
+    svgs: [ 'fixtures/account-494x512.svg' ],
+    name: fontName,
+    descent: 1
+  };
+  const expectedSrc = `url('~!!iconfont-webpack-plugin/lib/loader.js?${JSON.stringify(loaderOptions)}!iconfont-webpack-plugin/placeholder.svg') format('woff')`;
+  t.is(fontSrc, expectedSrc);
   t.pass();
 });
