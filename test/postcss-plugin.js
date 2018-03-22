@@ -103,7 +103,7 @@ test('should add font-face', async (t) => {
   const fontDefinition = postcssResult.root.nodes[0];
   t.is(fontDefinition.type, 'atrule');
   t.is(fontDefinition.name, 'font-face');
-  t.is(getDeclaration(fontDefinition, 'font-family').value, 'vf5c77');
+  t.is(getDeclaration(fontDefinition, 'font-family').value, 'wc69f6');
   t.pass();
 });
 
@@ -116,7 +116,7 @@ test('should add font-face with fontNamePrefix', async (t) => {
   const fontDefinition = postcssResult.root.nodes[0];
   t.is(fontDefinition.type, 'atrule');
   t.is(fontDefinition.name, 'font-face');
-  t.is(getDeclaration(fontDefinition, 'font-family').value, 'prefix-vf5c77');
+  t.is(getDeclaration(fontDefinition, 'font-family').value, 'prefix-wc69f6');
   t.pass();
 });
 
@@ -202,7 +202,7 @@ test('should pass the svgs and font name to the iconfont-webpack-plugin loader',
   const fontName = getDeclaration(fontDefinition, 'font-family').value;
   const fontSrc = getDeclaration(fontDefinition, 'src').value;
   const loaderOptions = {
-    svgs: [ 'fixtures/account-494x512.svg' ],
+    svgs: [ 'test/src/fixtures/account-494x512.svg' ],
     name: fontName
   };
   const expectedSrc = `url('~!!iconfont-webpack-plugin/lib/loader.js?${JSON.stringify(loaderOptions)}!iconfont-webpack-plugin/placeholder.svg') format('woff')`;
@@ -223,7 +223,7 @@ test('should pass the svgs and font name to the iconfont-webpack-plugin loader i
   const fontName = getDeclaration(fontDefinition, 'font-family').value;
   const fontSrc = getDeclaration(fontDefinition, 'src').value;
   const loaderOptions = {
-    svgs: [ 'fixtures/account-494x512.svg' ],
+    svgs: [ 'test/src/fixtures/account-494x512.svg' ],
     name: fontName
   };
   const expectedSrc = `url('!!iconfont-webpack-plugin/lib/loader.js?${JSON.stringify(loaderOptions)}!iconfont-webpack-plugin/placeholder.svg') format('woff')`;
