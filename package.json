@@ -68,7 +68,7 @@
   },
   "peerDependencies": {
     "webpack": "*",
-    "postcss-loader": "2.1.3"
+    "postcss-loader": "^2.1.3"
   },
   "config": {
     "commitizen": {
