@@ -6,6 +6,8 @@ import postcss from 'postcss';
 import postcssPlugin from '../lib/postcss-plugin.js';
 import { loader } from './helpers/loader-mock.js';
 
+const iconFontPath = path.dirname(__dirname).replace(/\\/g, '/');
+
 async function processCss (css, options = {}) {
   const postCssPluginOptions = {
     resolve: loader.resolve,
@@ -205,7 +207,7 @@ test('should pass the svgs and font name to the iconfont-webpack-plugin loader',
     svgs: [ 'test/src/fixtures/account-494x512.svg' ],
     name: fontName
   };
-  const expectedSrc = `url('~!!iconfont-webpack-plugin/lib/loader.js?${JSON.stringify(loaderOptions)}!iconfont-webpack-plugin/placeholder.svg') format('woff')`;
+  const expectedSrc = `url('~!!${iconFontPath}/lib/loader.js?${JSON.stringify(loaderOptions)}!${iconFontPath}/placeholder.svg') format('woff')`;
   t.is(fontSrc, expectedSrc);
   t.pass();
 });
@@ -226,7 +228,7 @@ test('should pass the svgs and font name to the iconfont-webpack-plugin loader i
     svgs: [ 'test/src/fixtures/account-494x512.svg' ],
     name: fontName
   };
-  const expectedSrc = `url('!!iconfont-webpack-plugin/lib/loader.js?${JSON.stringify(loaderOptions)}!iconfont-webpack-plugin/placeholder.svg') format('woff')`;
+  const expectedSrc = `url('!!${iconFontPath}/lib/loader.js?${JSON.stringify(loaderOptions)}!${iconFontPath}/placeholder.svg') format('woff')`;
   t.is(fontSrc, expectedSrc);
   t.pass();
 });
