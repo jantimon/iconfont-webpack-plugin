@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/jantimon/iconfont-webpack-plugin/compare/v2.0.0...v3.0.0) (2018-06-20)
+
+
+### Features
+
+* **icon-generation:** Add new option enforcedSvgHeight to improve the icon quality ([efed575](https://github.com/jantimon/iconfont-webpack-plugin/commit/efed575)), closes [#21](https://github.com/jantimon/iconfont-webpack-plugin/issues/21)
+
+
+### BREAKING CHANGES
+
+* **icon-generation:** SVGs are now scaled by default
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/jantimon/iconfont-webpack-plugin/compare/v1.2.0...v2.0.0) (2018-05-08)
 
