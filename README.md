@@ -62,6 +62,7 @@ Probably you won't need this but you can also pass some additional options.
 |:--:|:--:|:-----:|:----------|
 |**`resolve`**|`{Function}`||Required - A function which resolves the svg paths. See [resolve](https://webpack.js.org/api/loaders/#this-resolve)|
 |**`fontNamePrefix`**|`{String}`|`''`| Allows to prefix the generated font name |
+|**`enforcedSvgHeight`**|`{number}`|`1000`| Scales all svg to the given height |
 |**`modules`**|`{Boolean}`|`false`|Enable/Disable CSS Modules - should be equal to your css-loader settings |
 
 
@@ -82,6 +83,7 @@ const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
                 new IconfontWebpackPlugin({
                   resolve: loader.resolve,
                   fontNamePrefix: 'custom-',
+                  enforcedSvgHeight: 3000,
                   modules: false,
                 })
               ]

@@ -1,5 +1,5 @@
 a:before {
-  font-icon: url('./account.svg');
+  font-icon: url('./house.svg');
   transition: 0.5s color;
 }
 
@@ -8,5 +8,5 @@ a:hover:before {
 }
 
 a:after {
-  font-icon: 50% url('./account.svg');
+  font-icon: 50% url('./house.svg');
 }

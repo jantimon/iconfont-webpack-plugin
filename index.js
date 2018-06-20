@@ -9,6 +9,11 @@ module.exports = function IconfontWebpackPlugin (userOptions) {
     // allows to prefix the font name to prevent collisions
     fontNamePrefix: '',
 
+    // the svg size requires all svgs to have the same height
+    // usually scaling the icons to 1000px should be fine but if you prefer
+    // another value set it here
+    enforcedSvgHeight: 1000,
+
     // resolve function to translate webpack urls into absolute filepaths
     // e.g. url('demo.svg') -> '/Users/me/project-x/demo.svg'
     // usually you should pass on the postcss loader
