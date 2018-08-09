@@ -63,7 +63,7 @@
     "lodash": "4.17.5",
     "postcss": "6.0.20",
     "svg2ttf": "4.1.0",
-    "svgicons2svgfont": "9.0.2",
+    "svgicons2svgfont": "9.0.3",
     "ttf2woff": "2.0.1"
   },
   "peerDependencies": {
