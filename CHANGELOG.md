@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.1"></a>
+## [3.0.1](https://github.com/jantimon/iconfont-webpack-plugin/compare/v3.0.0...v3.0.1) (2018-08-10)
+
+
+### Bug Fixes
+
+* Compile error in svgicons2svgfont ([cdb6e0f](https://github.com/jantimon/iconfont-webpack-plugin/commit/cdb6e0f))
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/jantimon/iconfont-webpack-plugin/compare/v2.0.0...v3.0.0) (2018-06-20)
 
