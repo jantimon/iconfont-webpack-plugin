@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/jantimon/iconfont-webpack-plugin/compare/v3.0.1...v3.1.0) (2019-01-03)
+
+
+### Features
+
+* Add postcss-loader 3 support to peer dependency ([#31](https://github.com/jantimon/iconfont-webpack-plugin/issues/31)) ([9b02c88](https://github.com/jantimon/iconfont-webpack-plugin/commit/9b02c88))
+
+
+
 <a name="3.0.1"></a>
 ## [3.0.1](https://github.com/jantimon/iconfont-webpack-plugin/compare/v3.0.0...v3.0.1) (2018-08-10)
 
