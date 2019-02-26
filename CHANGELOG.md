@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.1.1"></a>
+## [3.1.1](https://github.com/jantimon/iconfont-webpack-plugin/compare/v3.1.0...v3.1.1) (2019-02-26)
+
+
+### Bug Fixes
+
+* upgrade nyc package because of "Prototype Pollution" in peer-dependency ([e6fc046](https://github.com/jantimon/iconfont-webpack-plugin/commit/e6fc046))
+
+
+### Features
+
+* **icon-generation:** Add npm configuration for saving exact versions ([ff408ce](https://github.com/jantimon/iconfont-webpack-plugin/commit/ff408ce))
+
+
+
 <a name="3.1.0"></a>
 # [3.1.0](https://github.com/jantimon/iconfont-webpack-plugin/compare/v3.0.1...v3.1.0) (2019-01-03)
 
