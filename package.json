@@ -42,9 +42,9 @@
     "parser": "babel-eslint"
   },
   "devDependencies": {
-    "ava": "0.25.0",
+    "ava": "1.2.1",
     "babel-eslint": "8.2.2",
-    "commitizen": "2.9.6",
+    "commitizen": "3.0.7",
     "conventional-changelog-cli": "1.3.17",
     "css-loader": "0.28.11",
     "cz-conventional-changelog": "2.1.0",
@@ -56,11 +56,11 @@
     "standard-version": "4.3.0",
     "style-loader": "0.20.3",
     "webpack": "4.2.0",
-    "webpack-cli": "2.0.12"
+    "webpack-cli": "3.2.3"
   },
   "dependencies": {
     "loader-utils": "1.1.0",
-    "lodash": "4.17.5",
+    "lodash": "4.17.11",
     "postcss": "6.0.20",
     "svg2ttf": "4.1.0",
     "svgicons2svgfont": "9.0.3",
