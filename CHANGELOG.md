@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.2.0"></a>
+# [3.2.0](https://github.com/jantimon/iconfont-webpack-plugin/compare/v3.1.0...v3.2.0) (2019-06-09)
+
+
+### Bug Fixes
+
+* package.json & package-lock.json to reduce vulnerabilities ([59d1b5b](https://github.com/jantimon/iconfont-webpack-plugin/commit/59d1b5b))
+* Remove lodash dependency ([ae9a50b](https://github.com/jantimon/iconfont-webpack-plugin/commit/ae9a50b))
+* upgrade nyc package because of "Prototype Pollution" in peer-dependency ([d186cc1](https://github.com/jantimon/iconfont-webpack-plugin/commit/d186cc1))
+* Use buffer for memory-fs readFile signature ([b0fc34e](https://github.com/jantimon/iconfont-webpack-plugin/commit/b0fc34e))
+
+
+### Features
+
+* **icon-generation:** Add npm configuration for saving exact versions ([22865c6](https://github.com/jantimon/iconfont-webpack-plugin/commit/22865c6))
+
+
+
 <a name="3.1.1"></a>
 ## [3.1.1](https://github.com/jantimon/iconfont-webpack-plugin/compare/v3.1.0...v3.1.1) (2019-02-26)
 
