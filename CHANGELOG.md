@@ -1,6 +1,20 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [4.0.0](https://github.com/jantimon/iconfont-webpack-plugin/compare/v3.2.0...v4.0.0) (2019-06-09)
+
+
+### Features
+
+* Add support for css-loader 2 ([2956b94](https://github.com/jantimon/iconfont-webpack-plugin/commit/2956b94))
+
+
+### BREAKING CHANGES
+
+* CSS modules are only supported with css-loader >= 2.x
+
+
 
 <a name="3.2.0"></a>
 # [3.2.0](https://github.com/jantimon/iconfont-webpack-plugin/compare/v3.1.0...v3.2.0) (2019-06-09)
