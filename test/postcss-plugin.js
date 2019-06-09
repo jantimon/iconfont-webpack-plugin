@@ -212,27 +212,6 @@ test('should pass the svgs and font name to the iconfont-webpack-plugin loader',
   t.pass();
 });
 
-test('should pass the svgs and font name to the iconfont-webpack-plugin loader if css-modules are enabled', async (t) => {
-  const postcssResult = await processCss(`
-    a {
-      font-icon: url('./fixtures/account-494x512.svg')
-    }
-    p {
-      font-icon: url('./fixtures/account-494x512.svg')
-    }
-  `, { modules: true });
-  const fontDefinition = postcssResult.root.nodes[0];
-  const fontName = getDeclaration(fontDefinition, 'font-family').value;
-  const fontSrc = getDeclaration(fontDefinition, 'src').value;
-  const loaderOptions = {
-    svgs: [ 'test/src/fixtures/account-494x512.svg' ],
-    name: fontName
-  };
-  const expectedSrc = `url('!!${iconFontPath}/lib/loader.js?${JSON.stringify(loaderOptions)}!${iconFontPath}/placeholder.svg') format('woff')`;
-  t.is(fontSrc, expectedSrc);
-  t.pass();
-});
-
 test('should throw an error for url syntax errors', async (t) => {
   let error;
   try {

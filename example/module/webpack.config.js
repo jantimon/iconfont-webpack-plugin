@@ -1,6 +1,6 @@
 var path = require('path');
 var IconfontWebpackPlugin = require('../../');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './example.js',
@@ -12,33 +12,30 @@ module.exports = {
   module: {
     rules: [
       { test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                modules: true
-              }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: (loader) => [
-                  new IconfontWebpackPlugin({
-                    resolve: loader.resolve,
-                    modules: true
-                  })
-                ]
-              }
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
             }
-          ]
-        })
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: (loader) => [
+                new IconfontWebpackPlugin({
+                  resolve: loader.resolve
+                })
+              ]
+            }
+          }
+        ]
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin('styles.css')
+    new MiniCssExtractPlugin({ filename: 'styles.css' })
   ]
 };
 
