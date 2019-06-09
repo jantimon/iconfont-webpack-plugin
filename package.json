@@ -60,7 +60,6 @@
   },
   "dependencies": {
     "loader-utils": "1.1.0",
-    "lodash": "4.17.11",
     "postcss": "6.0.20",
     "svg2ttf": "4.1.0",
     "svgicons2svgfont": "9.0.3",

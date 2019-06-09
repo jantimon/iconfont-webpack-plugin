@@ -1,10 +1,10 @@
+// @ts-check
 'use strict';
-let _ = require('lodash');
-let assert = require('assert');
+const assert = require('assert');
 
 module.exports = function IconfontWebpackPlugin (userOptions) {
   // Default options
-  const options = _.extend({
+  const options = Object.assign({
 
     // allows to prefix the font name to prevent collisions
     fontNamePrefix: '',
