@@ -1,0 +1,40 @@
+@font-face { font-family: Hacc2d; src:url(data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAPwAAsAAAAABgAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADsAAABUIIslek9TLzIAAAFEAAAAQQAAAFY2Lz7PY21hcAAAAYgAAABKAAABcOEoo6pnbHlmAAAB1AAAAFgAAABYA2INqWhlYWQAAAIsAAAAMAAAADYUFQIQaGhlYQAAAlwAAAAbAAAAJAaXAttobXR4AAACeAAAAAgAAAAIAtgAAGxvY2EAAAKAAAAABgAAAAYALAAAbWF4cAAAAogAAAAeAAAAIAEOACNuYW1lAAACqAAAASkAAAIWm5e+CnBvc3QAAAPUAAAAGwAAACxqQQEEeJxjYGRgYOBiMGCwY2BycfMJYeDLSSzJY5BiYGGAAJA8MpsxJzM9kYEDxgPKsYBpDiBmg4gCACY7BUgAeJxjYGTMYZzAwMrAwHiOaQ8DA0MPhGZ8wGDIyMTAwMTAysyAFQSkuaYwODxgeMDA/ALIjQKSAkCaESQHAAPVC2oAAAB4nO2QsQ2AMBADz8pDgRiBKjWzULG/2CT5GNgils6ST189sAAlOZMA3YiRK63sC5t9UH0Twz+09nfucKOVmd19fMu/ekEdGiYJUQAAAAIAAP/wAq4CyQAEABYAABsBBSUTByEXIQ8BFSMvATMfAT8BISchLDoBBQEIOn/+zQcBJhekAqQKTwZZWgr+6RUBkwLJ/XFKSgKP1lL4LQEuf0AYGGjzAHicY2BkYGAA4nk9dbbx/DZfGbiZXwBFGG4q37dE0P8/MK1jOgnkcjAwgUQBTuQMGXicY2BkYGB+wQAETDfA5DoGRgZUwAQAPzACegAAAAAAAtgAAAAAAAAALAAAeJxjYGRgYGBiEAdiBjCLgYELCBkY/oP5DAAK7QEyAAB4nGWQPW7CQBSEx2BIAlKCFCkps1UKIpmfkgNAT0GXwpi1MbK91npBossJcoQcIaeIcoIcKGPzaGAtP38zb97uygAG+IWHenm4bWq9WrihOnGb9CDsk5+FO+jjRbhLfyjcwxumwn084p07eP4dnQFK4Rbu8SHcpv8p7JO/hDt4wrdwl/6PcA8r/An38eoN08gUsSncUif7LLRnef6utK1SU6hJMD5bC11oGzq9Ueujqg7J1LlYxdbkas6uzjKjSmt2OnLB1rlyNhrF4geRyZEigkGBuKkOS2gk2CNDCHvVvdQrpi0q+rVWmCDA+Cq1YKpokiGVxobJNY6sFQ48bUrXMa34Ws7kpLnMat4kIyv+77q3oxPRD7BtpkrMMOITX+SD5g75Pz0RXqgAAAB4nGNgYoAALgbsgImRiZGZgSnTgIEBAARtALEA) format('woff');font-weight: normal;font-style: normal;}
+
+a:before {
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Hacc2d;
+  font-weight: normal;
+  content: '\e000';
+  margin-right: 10px;
+}
+
+html {
+	background: #1d1f20;
+}
+a {
+	font-family: Arial;
+  font-weight: 100;
+  font-size: 50px;
+  text-decoration: none;
+  color: transparent;
+  transition: 0.5s color;
+	background: linear-gradient(92deg, #f35626, #feab3a);
+	background-clip: text;
+	-webkit-background-clip: text;
+	animation: hue 10s infinite linear;
+}
+a:hover, a:focus {
+  color: white;
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}
+

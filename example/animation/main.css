@@ -1,0 +1,32 @@
+a:before {
+  font-icon: url('./html5.svg');
+  margin-right: 10px;
+}
+
+html {
+	background: #1d1f20;
+}
+a {
+	font-family: Arial;
+  font-weight: 100;
+  font-size: 50px;
+  text-decoration: none;
+  color: transparent;
+  transition: 0.5s color;
+	background: linear-gradient(92deg, #f35626, #feab3a);
+	background-clip: text;
+	-webkit-background-clip: text;
+	animation: hue 10s infinite linear;
+}
+a:hover, a:focus {
+  color: white;
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}

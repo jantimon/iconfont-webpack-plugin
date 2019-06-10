@@ -12,6 +12,7 @@
     "commit": "node_modules/.bin/git-cz",
     "prepublish": "npm run test",
     "changelog": "conventional-changelog -s -i CHANGELOG.md -p angular",
+    "example:animation": "webpack --config example/animation/webpack.config.js",
     "example:default": "webpack --config example/default/webpack.config.js",
     "example:module": "webpack --config example/module/webpack.config.js",
     "release": "standard-version",

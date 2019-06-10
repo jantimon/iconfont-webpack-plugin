@@ -1,7 +1,8 @@
 # Icon Font Webpack Plugin
 [![npm version](https://badge.fury.io/js/iconfont-webpack-plugin.svg)](http://badge.fury.io/js/iconfont-webpack-plugin) [![Dependency Status](https://david-dm.org/jantimon/iconfont-webpack-plugin.svg)](https://david-dm.org/jantimon/iconfont-webpack-plugin) [![Build status](https://travis-ci.org/jantimon/iconfont-webpack-plugin.svg)](https://travis-ci.org/jantimon/iconfont-webpack-plugin) [![Build status](https://ci.appveyor.com/api/projects/status/kp2kk6s7vsf8moea/branch/master?svg=true)](https://ci.appveyor.com/project/jantimon/iconfont-webpack-plugin/branch/master)
 
-This plugin tries to keep the usage and maintenance of icon fonts as simple as possible:
+[![icon font webpack plugin demo](https://raw.githubusercontent.com/jantimon/iconfont-webpack-plugin/master/iconfont.gif)](https://github.com/jantimon/iconfont-webpack-plugin/blob/master/example/animation/main.css)  
+This plugin tries to keep the usage and maintenance of icon fonts as simple as possible.
 
 ```css
 a:before {
@@ -160,6 +161,7 @@ SVGs have some disadvantages and lack certain features especially when used insi
 * [IE9 - IE 11 scaling issues](https://gist.github.com/larrybotha/7881691)
 * Fill color doesn't work for background SVG images
 * Inline SVGs are resolved relative to the page not to the css
+* You want to use background-clip:text
 
 ## What about all the rant on icon fonts?
 
