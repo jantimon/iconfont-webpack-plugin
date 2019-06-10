@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/jantimon/iconfont-webpack-plugin/compare/v4.0.0...v4.1.0) (2019-06-10)
+
+
+### Features
+
+* drop same height requirement ([8f59298](https://github.com/jantimon/iconfont-webpack-plugin/commit/8f59298))
+
+
+
 ## [4.0.0](https://github.com/jantimon/iconfont-webpack-plugin/compare/v3.2.0...v4.0.0) (2019-06-09)
 
 
