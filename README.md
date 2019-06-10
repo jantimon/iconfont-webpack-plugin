@@ -19,6 +19,7 @@ This plugin requires:
  + webpack 3.x or higher 
  + postcss-loader 2.x or higher
  + node 6 or higher
+ + css-loader 2.x or higher
 
 ## Installation
 
@@ -64,8 +65,6 @@ Probably you won't need this but you can also pass some additional options.
 |**`resolve`**|`{Function}`||Required - A function which resolves the svg paths. See [resolve](https://webpack.js.org/api/loaders/#this-resolve)|
 |**`fontNamePrefix`**|`{String}`|`''`| Allows to prefix the generated font name |
 |**`enforcedSvgHeight`**|`{number}`|`1000`| Scales all svg to the given height |
-|**`modules`**|`{Boolean}`|`false`|Enable/Disable CSS Modules - should be equal to your css-loader settings |
-
 
 ```js
 const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
@@ -140,6 +139,15 @@ a:before {
   font-icon: 80% url('./account.svg');
 }
 ```
+
+## SVG Requirements
+
+The main work of the iconfont-webpack-plugin is done by [svg2ttf](https://github.com/fontello/svg2ttf) which converts svgs into fonts.  
+Therefore it inherits all its [limitations](https://github.com/fontello/fontello/wiki/How-to-use-custom-images#importing-svg-images).
+
+1. Remove all fills and colors. You can probably leave black fills. In fonts, fill is defined by contour direction. Make sure that you don't have any complex rules like evenodd fills.
+2. Remove all FAT line attributes. This is not supported by Fontello. In fonts, fat lines are drown by 2 nested contours.
+3. Join all contours to a single outline. This is the last and the most important step. Usually editors automatically set the correct contour direction depending on nesting and black fills.
 
 ## Should you use icon fonts for everything?
 
