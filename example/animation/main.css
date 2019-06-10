@@ -2,9 +2,14 @@ a:before {
   font-icon: url('./html5.svg');
   margin-right: 10px;
 }
+a:after {
+  font-icon: url('./icons.svg');
+  margin-left: 10px;
+}
+
 
 html {
-	background: #1d1f20;
+	background: #ffffff;
 }
 a {
 	font-family: Arial;
@@ -13,13 +18,13 @@ a {
   text-decoration: none;
   color: transparent;
   transition: 0.5s color;
-	background: linear-gradient(92deg, #f35626, #feab3a);
+	background: linear-gradient(92deg, #f35626, #d88e27);
 	background-clip: text;
 	-webkit-background-clip: text;
-	animation: hue 10s infinite linear;
+  animation: hue 10s infinite linear;
 }
 a:hover, a:focus {
-  color: white;
+  color: #333;
 }
 
 @keyframes hue {
