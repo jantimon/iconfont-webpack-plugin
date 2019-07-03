@@ -21,7 +21,9 @@
     "posttest:semistandard": "semistandard",
     "posttest:coverage": "nyc ava",
     "posttest:coverage-report": "nyc report --reporter=html",
-    "posttest:coverage-check": "nyc check-coverage --lines 100 --functions 100 --branches 100"
+    "posttest:coverage-check": "nyc check-coverage --lines 100 --functions 100 --branches 100",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -60,7 +62,8 @@
     "postcss": "6.0.23",
     "svg2ttf": "4.3.0",
     "svgicons2svgfont": "9.1.1",
-    "ttf2woff": "2.0.1"
+    "ttf2woff": "2.0.1",
+    "snyk": "^1.189.0"
   },
   "peerDependencies": {
     "webpack": "*",
@@ -71,5 +74,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "snyk": true
 }
