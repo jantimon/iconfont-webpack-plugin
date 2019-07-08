@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.2.1](https://github.com/jantimon/iconfont-webpack-plugin/compare/v4.2.0...v4.2.1) (2019-07-08)
+
+
+### Bug Fixes
+
+* postcss-plugin returns now a consistent void return value ([403156a](https://github.com/jantimon/iconfont-webpack-plugin/commit/403156a))
+
+
+
 ## [4.2.0](https://github.com/jantimon/iconfont-webpack-plugin/compare/v4.1.0...v4.2.0) (2019-07-08)
 
 
