@@ -19,6 +19,7 @@
     "test": "ava -v",
     "posttest": "npm-run-all posttest:*",
     "posttest:semistandard": "semistandard",
+    "posttest:typecheck": "tsc",
     "posttest:coverage": "nyc ava",
     "posttest:coverage-report": "nyc report --reporter=html",
     "posttest:coverage-check": "nyc check-coverage --lines 100 --functions 100 --branches 100"
@@ -40,6 +41,7 @@
   },
   "homepage": "https://github.com/jantimon/iconfont-webpack-plugin",
   "devDependencies": {
+    "@types/node": "12.0.12",
     "ava": "0.25.0",
     "commitizen": "3.1.1",
     "conventional-changelog-cli": "2.0.21",
@@ -52,6 +54,7 @@
     "semistandard": "13.0.1",
     "standard-version": "6.0.1",
     "style-loader": "0.23.1",
+    "typescript": "3.5.2",
     "webpack": "4.33.0",
     "webpack-cli": "3.3.3"
   },

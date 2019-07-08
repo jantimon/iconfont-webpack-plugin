@@ -2,7 +2,19 @@
 'use strict';
 const assert = require('assert');
 
-module.exports = function IconfontWebpackPlugin (userOptions) {
+/**
+ * The main plugin
+ *
+ * Options:
+ * @param {{
+
+   fontNamePrefix?: string,
+   enforcedSvgHeight?: number,
+   resolve?: any
+
+  }} [userOptions]
+ */
+function IconfontWebpackPlugin (userOptions) {
   // Default options
   const options = Object.assign({
 
@@ -35,4 +47,6 @@ module.exports = function IconfontWebpackPlugin (userOptions) {
 
   // Call postcss plugin
   return require('./lib/postcss-plugin')(options);
-};
+}
+
+module.exports = IconfontWebpackPlugin;
