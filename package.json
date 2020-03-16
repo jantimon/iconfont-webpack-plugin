@@ -1,6 +1,6 @@
 {
   "name": "iconfont-webpack-plugin",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "description": "Simple icon font handling for webpack",
   "main": "index.js",
   "files": [

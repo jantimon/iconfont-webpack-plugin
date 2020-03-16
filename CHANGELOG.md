@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.2.2](https://github.com/jantimon/iconfont-webpack-plugin/compare/v4.2.1...v4.2.2) (2020-03-16)
+
+
+### Bug Fixes
+
+* Adjust types to align with latest typescript spec ([5b360fa](https://github.com/jantimon/iconfont-webpack-plugin/commit/5b360fa2c898f4c324dfad90e75fc97949141db8))
+
 ### [4.2.1](https://github.com/jantimon/iconfont-webpack-plugin/compare/v4.2.0...v4.2.1) (2019-07-08)
 
 
