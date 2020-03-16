@@ -15,7 +15,7 @@ async function processCss (css, options = {}) {
     modules: options.modules
   };
   const trimmedCss = css.replace(/\s*\n\s*/g, '\n');
-  return postcss([ postcssPlugin(postCssPluginOptions) ])
+  return postcss([postcssPlugin(postCssPluginOptions)])
     .process(trimmedCss, { from: path.join(__dirname, 'src/app.css'), to: 'app.css' });
 }
 
@@ -204,7 +204,7 @@ test('should pass the svgs and font name to the iconfont-webpack-plugin loader',
   const fontName = getDeclaration(fontDefinition, 'font-family').value;
   const fontSrc = getDeclaration(fontDefinition, 'src').value;
   const loaderOptions = {
-    svgs: [ 'test/src/fixtures/account-494x512.svg' ],
+    svgs: ['test/src/fixtures/account-494x512.svg'],
     name: fontName
   };
   const expectedSrc = `url('~!!${iconFontPath}/lib/loader.js?${JSON.stringify(loaderOptions)}!${iconFontPath}/placeholder.svg') format('woff')`;

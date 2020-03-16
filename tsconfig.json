@@ -4,7 +4,7 @@
 		"noEmit": true,
 		"target": "es6",
 		"lib": ["es6"],
-		"rootDir": "src",
+		"rootDir": "./",
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"strict": true,
