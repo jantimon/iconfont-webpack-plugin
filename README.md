@@ -19,11 +19,11 @@ This plugin requires:
  + webpack 3.x or higher 
  + postcss-loader 2.x or higher
  + node 6 or higher
- + css-loader 2.x or higher
+ + css-loader 3.x or higher
 
 ## Installation
 
-```
+```bash
 npm i --save-dev postcss-loader
 npm i --save-dev iconfont-webpack-plugin
 ```
@@ -84,7 +84,6 @@ const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
                   resolve: loader.resolve,
                   fontNamePrefix: 'custom-',
                   enforcedSvgHeight: 3000,
-                  modules: false,
                 })
               ]
             }

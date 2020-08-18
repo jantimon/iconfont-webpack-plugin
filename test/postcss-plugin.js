@@ -207,7 +207,7 @@ test('should pass the svgs and font name to the iconfont-webpack-plugin loader',
     svgs: ['test/src/fixtures/account-494x512.svg'],
     name: fontName
   };
-  const expectedSrc = `url('~!!${iconFontPath}/lib/loader.js?${JSON.stringify(loaderOptions)}!${iconFontPath}/placeholder.svg') format('woff')`;
+  const expectedSrc = `url('!!${iconFontPath}/lib/loader.js?${JSON.stringify(loaderOptions)}!~${iconFontPath}/placeholder.svg') format('woff')`;
   t.is(fontSrc, expectedSrc);
   t.pass();
 });
