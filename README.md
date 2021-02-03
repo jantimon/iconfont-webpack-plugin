@@ -18,13 +18,13 @@ Preprocessor Support: All - works with sass, less, stylus, postcss, vanilla css,
 This plugin requires:
  + webpack 3.x or higher 
  + postcss-loader 2.x or higher
- + node 6 or higher
  + css-loader 3.x or higher
+ + node 10 or higher
 
 ## Installation
 
 ```bash
-npm i --save-dev postcss-loader
+npm i --save-dev postcss-loader webpack css-loader
 npm i --save-dev iconfont-webpack-plugin
 ```
 
