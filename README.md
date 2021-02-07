@@ -44,16 +44,21 @@ const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
           {
             loader: 'postcss-loader',
             options: {
-              plugins: (loader) => [
-                // Add the plugin
-                new IconfontWebpackPlugin(loader)
-              ]
+              postcssOptions: (loader) => {
+                return {
+                  plugins: [
+                    IconfontWebpackPlugin({
+                      resolve: loader.resolve
+                    })
+                  ]
+                };
+              }
             }
           }
         ]
       }
     ]
-  },
+  }
 ```
 
 ## Advanced Configuration
@@ -77,21 +82,22 @@ const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
           'css-loader',
           {
             loader: 'postcss-loader',
-            options: {
-              plugins: (loader) => [
-                // Add the plugin
-                new IconfontWebpackPlugin({
-                  resolve: loader.resolve,
-                  fontNamePrefix: 'custom-',
-                  enforcedSvgHeight: 3000,
-                })
-              ]
+            postcssOptions: (loader) => {
+              return {
+                plugins: [
+                  IconfontWebpackPlugin({
+                    resolve: loader.resolve,
+                    fontNamePrefix: 'custom-',
+                    enforcedSvgHeight: 3000,
+                  })
+                ]
+              };
             }
           }
         ]
       }
     ]
-  },
+  }
 ```
 
 ## Usage
