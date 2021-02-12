@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.0.1](https://github.com/jantimon/iconfont-webpack-plugin/compare/v5.0.0...v5.0.1) (2021-02-12)
+
+
+### Bug Fixes
+
+* allow higher versions of peer dependency postcss-loader ([f9cc595](https://github.com/jantimon/iconfont-webpack-plugin/commit/f9cc59511be05e0e8b6fede7690b26fa791af9f7))
+* update some dependencies ([04b3423](https://github.com/jantimon/iconfont-webpack-plugin/commit/04b34233cc56ca3bd33745b9d3db2c460be88119))
+
 ## [5.0.0](https://github.com/jantimon/iconfont-webpack-plugin/compare/v4.2.2...v5.0.0) (2020-08-19)
 
 
