@@ -1,5 +1,5 @@
 # Icon Font Webpack Plugin
-[![npm version](https://badge.fury.io/js/iconfont-webpack-plugin.svg)](http://badge.fury.io/js/iconfont-webpack-plugin) [![Dependency Status](https://david-dm.org/jantimon/iconfont-webpack-plugin.svg)](https://david-dm.org/jantimon/iconfont-webpack-plugin) [![Build status](https://travis-ci.org/jantimon/iconfont-webpack-plugin.svg)](https://travis-ci.org/jantimon/iconfont-webpack-plugin) [![Build status](https://ci.appveyor.com/api/projects/status/kp2kk6s7vsf8moea/branch/master?svg=true)](https://ci.appveyor.com/project/jantimon/iconfont-webpack-plugin/branch/master)
+[![npm version](https://badge.fury.io/js/iconfont-webpack-plugin.svg)](http://badge.fury.io/js/iconfont-webpack-plugin) [![Dependency Status](https://david-dm.org/jantimon/iconfont-webpack-plugin.svg)](https://david-dm.org/jantimon/iconfont-webpack-plugin) [![CI](https://github.com/jantimon/iconfont-webpack-plugin/workflows/CI/badge.svg)](https://github.com/jantimon/iconfont-webpack-plugin/actions/)
 
 [![icon font webpack plugin demo](https://raw.githubusercontent.com/jantimon/iconfont-webpack-plugin/master/iconfont.gif)](https://codepen.io/jantimon/pen/YoKewb)  
 This plugin tries to keep the usage and maintenance of icon fonts as simple as possible.
