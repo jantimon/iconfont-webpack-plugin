@@ -47,7 +47,7 @@ const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
               postcssOptions: (loader) => {
                 return {
                   plugins: [
-                    IconfontWebpackPlugin({
+                    new IconfontWebpackPlugin({
                       resolve: loader.resolve
                     })
                   ]
@@ -85,7 +85,7 @@ const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
             postcssOptions: (loader) => {
               return {
                 plugins: [
-                  IconfontWebpackPlugin({
+                  new IconfontWebpackPlugin({
                     resolve: loader.resolve,
                     fontNamePrefix: 'custom-',
                     enforcedSvgHeight: 3000,
