@@ -18,13 +18,13 @@ Preprocessor Support: All - works with sass, less, stylus, postcss, vanilla css,
 This plugin requires:
  + webpack 3.x or higher 
  + postcss-loader 2.x or higher
- + node 6 or higher
  + css-loader 3.x or higher
+ + node 10 or higher
 
 ## Installation
 
 ```bash
-npm i --save-dev postcss-loader
+npm i --save-dev postcss-loader webpack css-loader
 npm i --save-dev iconfont-webpack-plugin
 ```
 
@@ -44,16 +44,21 @@ const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
           {
             loader: 'postcss-loader',
             options: {
-              plugins: (loader) => [
-                // Add the plugin
-                new IconfontWebpackPlugin(loader)
-              ]
+              postcssOptions: (loader) => {
+                return {
+                  plugins: [
+                    IconfontWebpackPlugin({
+                      resolve: loader.resolve
+                    })
+                  ]
+                };
+              }
             }
           }
         ]
       }
     ]
-  },
+  }
 ```
 
 ## Advanced Configuration
@@ -77,21 +82,22 @@ const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
           'css-loader',
           {
             loader: 'postcss-loader',
-            options: {
-              plugins: (loader) => [
-                // Add the plugin
-                new IconfontWebpackPlugin({
-                  resolve: loader.resolve,
-                  fontNamePrefix: 'custom-',
-                  enforcedSvgHeight: 3000,
-                })
-              ]
+            postcssOptions: (loader) => {
+              return {
+                plugins: [
+                  IconfontWebpackPlugin({
+                    resolve: loader.resolve,
+                    fontNamePrefix: 'custom-',
+                    enforcedSvgHeight: 3000,
+                  })
+                ]
+              };
             }
           }
         ]
       }
     ]
-  },
+  }
 ```
 
 ## Usage

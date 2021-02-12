@@ -1,8 +1,9 @@
-var path = require('path');
-var IconfontWebpackPlugin = require('../../');
-var MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
+const IconfontWebpackPlugin = require('../../');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  mode: 'production',
   entry: './example.js',
   output: {
     path: path.join(__dirname, 'dist/'),
@@ -24,11 +25,15 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: (loader) => [
-                new IconfontWebpackPlugin({
-                  resolve: loader.resolve
-                })
-              ]
+              postcssOptions: (loader) => {
+                return {
+                  plugins: [
+                    IconfontWebpackPlugin({
+                      resolve: loader.resolve
+                    })
+                  ]
+                };
+              }
             }
           }
         ]
