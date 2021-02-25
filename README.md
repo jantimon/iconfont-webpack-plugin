@@ -70,6 +70,7 @@ Probably you won't need this but you can also pass some additional options.
 |**`resolve`**|`{Function}`||Required - A function which resolves the svg paths. See [resolve](https://webpack.js.org/api/loaders/#this-resolve)|
 |**`fontNamePrefix`**|`{String}`|`''`| Allows to prefix the generated font name |
 |**`enforcedSvgHeight`**|`{number}`|`1000`| Scales all svg to the given height |
+|**`enforcedTimestamp`**|`{number}`|| Overwrites the UNIX timestamp in the TTF font conversion step. This way, every build will give you exactly the same result.
 
 ```js
 const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
@@ -89,6 +90,7 @@ const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
                     resolve: loader.resolve,
                     fontNamePrefix: 'custom-',
                     enforcedSvgHeight: 3000,
+                    enforcedTimestamp: 1528942455
                   })
                 ]
               };
@@ -187,4 +189,3 @@ We tried to apply best practices to solve the main issues for you.
 # License
 
 This project is licensed under [MIT](https://github.com/jantimon/iconfont-webpack-plugin/blob/master/LICENSE).
-
