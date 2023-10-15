@@ -1,10 +1,10 @@
 'use strict';
 /* eslint max-len: off, quotes:off, arrow-parens:off */
-import test from 'ava';
-import path from 'path';
-import postcss from 'postcss';
-import postcssPlugin from '../lib/postcss-plugin.js';
-import { loader } from './helpers/loader-mock.js';
+const test = require('ava');
+const path = require('path');
+const postcss = require('postcss');
+const postcssPlugin = require('../lib/postcss-plugin.js');
+const loader = require('./helpers/loader-mock.js').loader;
 
 const iconFontPath = path.dirname(__dirname).replace(/\\/g, '/');
 
